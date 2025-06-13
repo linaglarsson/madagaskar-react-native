@@ -7,7 +7,7 @@ const { width, height } = Dimensions.get("window");
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      {/* Bakgrunds-GIF */}
+      {}
       <Image
         source={{
           uri: "https://i.pinimg.com/originals/69/59/3f/69593ff2771fc7792efa5080b490ea70.gif",
@@ -17,7 +17,7 @@ export default function TabTwoScreen() {
         transition={1000}
       />
 
-      {/* Överlägg med text och extra GIF */}
+      {}
       <View style={styles.overlay}>
         <Text style={styles.title}>Fakta</Text>
         <Text style={styles.subtitle}>
@@ -25,7 +25,7 @@ export default function TabTwoScreen() {
           Move It Ya Like To... (MOVE IT!)
         </Text>
 
-        {/* Liten GIF ovanpå */}
+        {}
         <Image
           source={{
             uri: "https://i.pinimg.com/originals/1e/d5/e1/1ed5e1c9810075432d681e993af8df16.gif",
