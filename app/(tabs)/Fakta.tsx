@@ -10,7 +10,7 @@ export default function TabTwoScreen() {
       {}
       <Image
         source={{
-          uri: "https://i.pinimg.com/originals/69/59/3f/69593ff2771fc7792efa5080b490ea70.gif",
+          uri: "https://dl.glitter-graphics.com/pub/3544/3544742atmg08f4bk.gif",
         }}
         style={styles.backgroundGif}
         contentFit="cover"
@@ -21,8 +21,13 @@ export default function TabTwoScreen() {
       <View style={styles.overlay}>
         <Text style={styles.title}>Fakta</Text>
         <Text style={styles.subtitle}>
-          I Like To Move It Move It I Like To Move It Move It I Like To Move It
-          Move It Ya Like To... (MOVE IT!)
+          Madagaskar är världens fjärde största ö och ligger i Indiska oceanen
+          cirka 50 mil från det afrikanska fastlandet. På Madagaskar har en unik
+          flora och fauna utvecklats sedan ön avskildes från de afrikanska och
+          asiatiska kontinenterna för 160 miljoner år sedan. Den etniskt
+          blandade befolkningen har såväl afrikanska som indonesiska inslag.
+          Madagaskar har gott om mineraler och bördiga jordar, men politisk
+          instabilitet har hämmat den ekonomiska utvecklingen.
         </Text>
 
         {}
@@ -65,11 +70,11 @@ const styles = StyleSheet.create({
     textShadowRadius: 4,
   },
   subtitle: {
-    color: "red",
+    color: "green",
     fontSize: 18,
     textAlign: "center",
     marginBottom: 20,
-    textShadowColor: "rgba(255, 0, 204, 0.7)",
+    textShadowColor: "rgb(0, 255, 26)",
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 4,
   },
