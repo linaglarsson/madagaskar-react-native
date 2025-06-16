@@ -10,7 +10,7 @@ export default function TabTwoScreen() {
       {}
       <Image
         source={{
-          uri: "https://dl.glitter-graphics.com/pub/3544/3544742atmg08f4bk.gif",
+          uri: "https://i.makeagif.com/media/4-25-2023/Iqg20k.gif",
         }}
         style={styles.backgroundGif}
         contentFit="cover"
@@ -21,13 +21,8 @@ export default function TabTwoScreen() {
       <View style={styles.overlay}>
         <Text style={styles.title}>Fakta</Text>
         <Text style={styles.subtitle}>
-          Madagaskar är världens fjärde största ö och ligger i Indiska oceanen
-          cirka 50 mil från det afrikanska fastlandet. På Madagaskar har en unik
-          flora och fauna utvecklats sedan ön avskildes från de afrikanska och
-          asiatiska kontinenterna för 160 miljoner år sedan. Den etniskt
-          blandade befolkningen har såväl afrikanska som indonesiska inslag.
-          Madagaskar har gott om mineraler och bördiga jordar, men politisk
-          instabilitet har hämmat den ekonomiska utvecklingen.
+          Fyra vänliga djur rymmer från ett zoo i New York och tar sig till ön
+          Madagaskar, där de får smak för livet i det vilda.
         </Text>
 
         {}
@@ -61,25 +56,28 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   title: {
-    color: "green",
+    color: "pink",
     fontSize: 32,
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 40,
     textShadowColor: "rgb(9, 255, 0)",
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 4,
+    transform: [{ rotate: "45deg" }],
   },
   subtitle: {
-    color: "green",
+    color: "pink",
     fontSize: 18,
     textAlign: "center",
     marginBottom: 20,
-    textShadowColor: "rgb(0, 255, 26)",
+    textShadowColor: "rgb(255, 148, 234)",
     textShadowOffset: { width: 0, height: 1 },
     textShadowRadius: 4,
+    transform: [{ rotate: "10deg" }],
   },
   smallGif: {
     width: 200,
     height: 200,
+    transform: [{ rotate: "-30deg" }],
   },
 });

@@ -1,17 +1,23 @@
+import { Pressable } from "react-native";
+import { useRouter } from "expo-router";
 import React, { useEffect, useRef } from "react";
 import { StyleSheet, Dimensions, View, Animated, Text } from "react-native";
 import { Image } from "expo-image";
+import { useAuth } from "../../context/AuthContext";
+import { Button } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 
 export default function TabTwoScreen() {
   const spinValue = useRef(new Animated.Value(0)).current;
+  const router = useRouter();
+  const { logout } = useAuth();
 
   useEffect(() => {
     Animated.loop(
       Animated.timing(spinValue, {
         toValue: 1,
-        duration: 100, // Snurrar ett varv var 4:e sekund
+        duration: 100,
         useNativeDriver: true,
       })
     ).start();
@@ -34,7 +40,7 @@ export default function TabTwoScreen() {
       />
 
       <View style={styles.overlay}>
-        {/* Snurrande text */}
+        <Button title="Logga ut" onPress={logout} />
         <Animated.Text
           style={[styles.title, { transform: [{ rotate: spin }] }]}
         >
