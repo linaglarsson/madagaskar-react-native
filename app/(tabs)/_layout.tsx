@@ -1,24 +1,27 @@
-import { Tabs, useRouter } from 'expo-router';
-import React, { useEffect } from 'react';
+import { Redirect, Tabs } from 'expo-router';
+import React from 'react';
 import { Platform } from 'react-native';
+import { useAuth } from '../../context/AuthContext';
 
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { useAuth } from '../../context/AuthContext';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
-  const { user } = useAuth();
-  const router = useRouter();
+  const { user, isLoading } = useAuth();
 
-  useEffect(() => {
-    if (!user) {
-      router.replace('/(auth)/login');
-    }
-  }, [user]);
+  if (isLoading) {
+    return null;
+  }
+
+  if (!user) {
+    return <Redirect href="/login" />
+  }
+
+  console.log(user, isLoading)
 
   return (
     <Tabs
@@ -29,7 +32,6 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
             position: 'absolute',
           },
           default: {},
@@ -43,9 +45,23 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="landningssida"
         options={{
-          title: 'Explore',
+          title: 'Start',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="fakta"
+        options={{
+          title: 'Info',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="profilsida"
+        options={{
+          title: 'Profile',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
         }}
       />
