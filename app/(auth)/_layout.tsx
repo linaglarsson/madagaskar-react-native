@@ -12,8 +12,6 @@ export default function AuthLayout() {
   if (user) {
     return <Redirect href="/(tabs)" />
   }
-
-  console.log(user, isLoading)
-  
+    
   return <Stack />;
 }

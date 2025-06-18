@@ -2,7 +2,7 @@ import React from 'react';
 import { Dimensions, ImageBackground, StyleSheet, View } from 'react-native';
 
 const { width } = Dimensions.get('window');
-const IMAGE_HEIGHT = 350; // or another value that fits your design
+const IMAGE_HEIGHT = 350;
 
 interface CustomPageProps {
   gif: string;
