@@ -1,10 +1,8 @@
-import { Pressable } from "react-native";
+import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import React, { useEffect, useRef } from "react";
-import { StyleSheet, Dimensions, View, Animated, Text } from "react-native";
-import { Image } from "expo-image";
+import { Animated, Button, Dimensions, StyleSheet, View } from "react-native";
 import { useAuth } from "../../context/AuthContext";
-import { Button } from "react-native";
 
 const { width, height } = Dimensions.get("window");
 

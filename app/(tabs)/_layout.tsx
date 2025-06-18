@@ -21,8 +21,6 @@ export default function TabLayout() {
     return <Redirect href="/login" />;
   }
 
-  console.log(user, isLoading);
-
   return (
     <Tabs
       screenOptions={{

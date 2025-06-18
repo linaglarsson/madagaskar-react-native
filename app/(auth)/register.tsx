@@ -1,9 +1,8 @@
-import { Pressable } from "react-native";
+import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import React, { useState } from "react";
-import { Button, Text, TextInput, View, StyleSheet } from "react-native";
+import { Button, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import { useAuth } from "../../context/AuthContext";
-import { Image } from "expo-image";
 
 export default function RegisterScreen() {
   const { register } = useAuth();
@@ -22,7 +21,6 @@ export default function RegisterScreen() {
 
   return (
     <View style={styles.container}>
-      {/* GIF tillagd här */}
       <Image
         source={{
           uri: "https://i.pinimg.com/originals/39/32/e4/3932e46245051972c100069d794e5e1b.gif",
